@@ -54,6 +54,7 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
+  width: 100%;
 `;
 
 const InfoContainer = styled.div`
@@ -65,6 +66,14 @@ const Title = styled.h1`
   font-size: 70px;
 `;
 
+const EventNoti = styled.div`
+  text-align: right
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1px;
+`;
+
 const Desc = styled.p`
   margin: 50px 0px;
   font-size: 20px;
@@ -72,20 +81,13 @@ const Desc = styled.p`
   letter-spacing: 3px;
 `;
 
-const Button = styled.button`
-  padding: 10px;
-  font-size: 20px;
-  background-color: transparent;
-  cursor: pointer;
-`;
-
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 4);
     } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+      setSlideIndex(slideIndex < 4 ? slideIndex + 1 : 0);
     }
   };
 
@@ -103,7 +105,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <EventNoti>Only applies when purchase directly at the shop</EventNoti>
             </InfoContainer>
           </Slide>
         ))}
