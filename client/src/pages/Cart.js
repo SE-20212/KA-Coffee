@@ -8,9 +8,6 @@ import { CLEAR_CART } from '../redux/actionTypes';
 import {faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ORDERS } from '../constants/routes';
 
-
-
-
 function Cart() {
   const history = useHistory();
   const CartProduct = useSelector((state) => state.cartReducer);

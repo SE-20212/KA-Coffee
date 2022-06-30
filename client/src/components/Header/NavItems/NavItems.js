@@ -25,6 +25,7 @@ function NavItems() {
   
     return (
       <div className="nav-item-container">
+         <a href="/userinfo">{user?.result.name}</a>
         {user ? (
           <Link to={HOMEPAGE}>
             <div className="nav-item-account" onClick={logout}>
@@ -40,6 +41,7 @@ function NavItems() {
             </div>
           </Link>
         )}
+       
         <Link to={CART_PAGE}>
           <div className="nav-item-cart">
             <FontAwesomeIcon icon={faShoppingCart} />

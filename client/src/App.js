@@ -12,7 +12,6 @@ import coffeeLoader from './assets/coffee-bean.png';
 import AdminLogin from './pages/AdminLogin';
 import Dashboard from './pages/Dashboard';
 
-
 import {getProducts} from './redux/actions/products'
 
 const HomePage = lazy(()=>import('./pages/HomePage.js'))
@@ -20,6 +19,8 @@ const DetailPage = lazy(() => import('./pages/DetailPage.js'))
 const LoginSignup = lazy(() => import('./pages/LoginSignup'))
 const CartPage = lazy(() => import("./pages/Cart.js"));
 const OrderPage = lazy(() => import("./pages/Orders.js"));
+const UserInfo = lazy(() => import("./pages/UserInfo.js"));
+
 
 function App() {
   const [currentId,setCurrentId] =useState(null)
@@ -61,6 +62,10 @@ function App() {
               <Route path={ROUTES.ORDERS}>
                 <Header />
                 <OrderPage />
+              </Route>
+              <Route path={ROUTES.USER_INFO}>
+                <Header />
+                <UserInfo />
               </Route>
               <Route path={ROUTES.LOGIN_SIGNUP} component={LoginSignup} />
               <Route path={ROUTES.ADMIN_LOGIN}>

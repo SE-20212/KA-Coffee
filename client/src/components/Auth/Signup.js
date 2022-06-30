@@ -6,6 +6,7 @@ import {signup} from '../../redux/actions/auth'
 
 const initialState = {
   fullName: "",
+  phone_number:"",
   email: "",
   password: "",
   confirmPassword: "",
@@ -37,6 +38,17 @@ function Signup({ toggleLogin }) {
               value={formData.fullName}
               onChange={(e) =>
                 setFormData({ ...formData, fullName: e.target.value })
+              }
+              type="text"
+              className="form-input"
+            />
+          </div>
+          <div className="form-control">
+            <label htmlFor="PhoneNumber">PhoneNumber</label>
+            <input
+              value={formData.phone_number}
+              onChange={(e) =>
+                setFormData({ ...formData, phone_number: e.target.value })
               }
               type="text"
               className="form-input"

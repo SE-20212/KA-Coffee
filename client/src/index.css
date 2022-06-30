@@ -35,6 +35,17 @@ code {
   background: var(--color-black);
   color: var(--color-golden) !important;
 }
+.user-info-container {
+  background: var(--color-black);
+  color: var(--color-golden) !important;
+  font-size: 3rem;
+}
+.detail-container {
+  gap: 2rem;
+}
+.h-44 {
+  margin-right: 2rem;
+}
 .order-container  {
   background: var(--color-black);
   color: var(--color-golden) !important;
