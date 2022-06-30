@@ -27,7 +27,9 @@ function FormSection() {
     name: "",
     selectedFile: "",
     price: "",
-    description:""
+    description:"",
+    category: "",
+    quantity: "",
   })
 
   const Isinvalid = productData.name === "" || productData.description==="" || productData.price ==="" || productData.selectedFile===""
@@ -61,6 +63,8 @@ function FormSection() {
       price: "",
       selectedFile: "",
       description: "",
+      category: "",
+      quantity: "",
     });
   }
     return (
@@ -90,6 +94,30 @@ function FormSection() {
                 type="number"
                 className="form-input"
                 placeholder="Product Price"
+              />
+            </div>
+            <div className="form-body ">
+              <input
+                name="category"
+                value={productData.category}
+                onChange={(e) =>
+                  setProductData({ ...productData, category: e.target.value })
+                }
+                type="text"
+                className="form-input"
+                placeholder="Product category"
+              />
+            </div>
+            <div className="form-body ">
+              <input
+                name="quantity"
+                value={productData.quantity}
+                onChange={(e) =>
+                  setProductData({ ...productData, quantity: e.target.value })
+                }
+                type="number"
+                className="form-input"
+                placeholder="Product quantity"
               />
             </div>
             <div className="form-body mt-4">

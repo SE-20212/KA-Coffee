@@ -5,6 +5,17 @@
 
  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800;900&display=swap"); 
 
+ :root {
+  --font-base: 'Cormorant Upright', serif;
+  --font-alt: 'Open Sans', sans-serif;
+  
+  --color-golden: #DCCA87;
+  --color-black: #0C0C0C;
+  --color-gray: #545454;
+  --color-crimson: #F5EFDB;
+  --color-grey: #AAAAAA;
+  --color-white: #FFFFFF;
+}
 
 body {
   margin: 0;
@@ -20,6 +31,32 @@ code {
     monospace;
 }
 
+.home-container  {
+  background: var(--color-black);
+  color: var(--color-golden) !important;
+}
+.order-container  {
+  background: var(--color-black);
+  color: var(--color-golden) !important;
+}
+.footer {
+  background: var(--color-crimson);
+}
+.header {
+  background: var(--color-crimson);
+}
+.product-section {
+  background: var(--color-black);
+  color: var(--color-golden) !important;
+}
+.card-container {
+  background: var(--color-black);
+  color: var(--color-golden) !important;
+}
+.p-10.text-center {
+  background: var(--color-black);
+  color: var(--color-golden) !important;
+}
 @layer base{
   .suspense{
     @apply h-screen flex bg-gray-100 items-center justify-center
@@ -58,13 +95,17 @@ code {
     @apply hidden lg:block md:w-1/3
   }
   .home-left-head{
-    @apply  text-sm sm:text-5xl font-bold  text-gray-800 
+    /* @apply  text-sm sm:text-5xl font-bold  text-gray-800  */
+    @apply  text-sm sm:text-5xl font-bold  
   }
   .home-left-heading{
-    @apply text-xl mt-2 sm:text-3xl text-gray-800
+    /* @apply text-xl mt-2 sm:text-3xl text-gray-800 */
+    @apply text-xl mt-2 sm:text-3xl 
   }
   .home-left-text{
-    @apply mt-4 text-gray-800 text-sm
+    @apply mt-4 text-sm
+    /* @apply mt-4 var(--color-golden) text-sm */
+
   }
   .home-image{
     @apply md:w-2/3 flex justify-center
@@ -100,10 +141,10 @@ code {
     @apply p-2
   }
   .card-heading{
-    @apply text-lg text-gray-800 font-semibold
+    @apply text-lg font-semibold
   }
   .card-text{
-    @apply text-base text-gray-800 font-semibold
+    @apply text-base font-semibold
   }
   .card-footer{
 @apply text-center p-2 bg-gray-200 font-semibold  cursor-pointer

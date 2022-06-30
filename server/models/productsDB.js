@@ -8,7 +8,10 @@ const productSchema = mongoose.Schema({
     createdAt: {
         type: Date,
         default:new Date()
-    }
+    }, 
+    category: String,
+    status: String,
+    quantity: Number,
 });
 
 const ProductDB = mongoose.model('ProductDB', productSchema);

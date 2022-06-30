@@ -27,7 +27,9 @@ function ProductList({ handleClick, Delete, Edit }) {
                       />
                       <div className="card-details">
                         <h1 className="card-heading">{product.name}</h1>
-                        <p className="card-text">${product.price}</p>
+                        <p className="card-text">Category: {product.category}</p>
+                        <p className="card-text">Quantity: {product.quantity}</p>
+                        <p className="card-text">Price: {product.price} VND</p>
                         {Edit && (
                           <div className="line-clamp-3 mt-3">
                             {" "}

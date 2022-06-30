@@ -92,6 +92,7 @@ function Cart() {
                     : `${qty} items`}{" "}
                   ): ${total.toFixed(2)}
                 </h1>
+                
                 <div className="flex justify-center" onClick={purchase}>
                   <button className="bg-yellow-300 border border-gray-400 mt-4 px-2 rounded-sm">
                     purchase

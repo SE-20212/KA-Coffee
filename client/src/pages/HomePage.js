@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react';
 import Hero from '../components/Hero/Hero';
+import SliderEvent from '../components/SliderEvent';
 import ProductList from '../components/ProductList/ProductList';
 import Footer from '../components/Footer/Footer';
 
@@ -27,7 +28,8 @@ useEffect(() => {
   return (
     <motion.div exit={{opacity:0}} initial={{opacity:0}} animate={{opacity:1}}>
       <main>
-        <Hero />
+        {/* <Hero /> */}
+        <SliderEvent />
         <ProductList handleClick={ handleClick}/>
         <Footer />
       </main>
