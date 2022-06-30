@@ -36,7 +36,7 @@ export const signup = async (req, res) => {
           return res.status(400).json({ message: "Passwords don't match" });
         const hashedPassword = await bcrypt.hash(password, 12);
         const result = await User.create({
-          email,
+          email: email,
           password: hashedPassword,
           name: fullName,
         });

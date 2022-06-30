@@ -31,7 +31,7 @@ function Login({ handleClick }) {
                 onChange={(e) =>
                   setFormData({ ...formData, AdminID: e.target.value })
                 }
-                type="email"
+                type="id"
                 className="form-input"
                 placeholder="Enter Admin ID"
               />

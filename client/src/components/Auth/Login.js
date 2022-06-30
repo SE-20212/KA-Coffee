@@ -54,8 +54,9 @@ function Login({ toggleSignup }) {
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              type="Email"
+              type="email"
               className="form-input"
+              placeholder="Enter email"
             />
           </div>
           <div className="form-control">
@@ -67,6 +68,7 @@ function Login({ toggleSignup }) {
               }
               type="password"
               className="form-input"
+              placeholder="Enter password"
             />
           </div>
 
