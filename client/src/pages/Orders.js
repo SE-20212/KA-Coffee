@@ -108,7 +108,7 @@ function Orders() {
           </div>
         )}
         <div className="flex justify-center">
-          <a className="bg-white-300 border border-gray-400 mt-4 px-2 rounded-sm" href="/">
+          <a className="bg-white-300 border border-gray-400 mt-4 px-2 rounded-sm" href="">
             purchase
           </a>
         </div>

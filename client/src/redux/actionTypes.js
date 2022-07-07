@@ -9,6 +9,8 @@ export const INCREASE_QTY = "INCREASE_QTY";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const CLEAR_CART = "CLEAR_CART";
 
+export const GET_ORDER = "GET_ORDER";
+
 export const AUTH = "AUTH";
 export const LOGOUT = "LOGOUT";
 
