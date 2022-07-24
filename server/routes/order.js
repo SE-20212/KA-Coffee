@@ -4,6 +4,6 @@ import { getOrder } from '../controllers/order.js';
 
 const  router = express.Router();
 
-router.get('/order', getOrder);
+router.post('/order', getOrder);
 
 export default router;
