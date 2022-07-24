@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import postRoutes from './routes/products.js';
 import userRoutes from './routes/users.js';
 import adminRoutes from './routes/admin.js'
-
+import orderRoutes from './routes/order.js';
 
 const app = express();
 dotenv.config();
@@ -24,6 +24,7 @@ app.use(
 app.use('/products', postRoutes);
 app.use('/users', userRoutes);
 app.use('/admin', adminRoutes);
+app.use('/order', orderRoutes);
 
 app.get('/', (req, res) => {
   res.send("Welcome to CoffeeShop API")

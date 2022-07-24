@@ -11,7 +11,7 @@ export const createProducts = (newProduct) => API.post('/products', newProduct);
 export const updatePost = (id, updatedPost) => API.patch(`/products/${id}`, updatedPost);
 export const deletePost = (id) => API.delete(`/products/${id}`);
 
-export const order = (formData) => API.post('/order', formData)
+export const getOrder = (formData) => API.post('/order', formData)
 export const signIn = (formData) => API.post('/users/signin', formData);
 export const signUp = (formData) => API.post('/users/signup', formData);
 

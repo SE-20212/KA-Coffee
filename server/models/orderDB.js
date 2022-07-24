@@ -8,16 +8,15 @@ const orderSchema = mongoose.Schema({
         address: {type:String,required:true},
     },
     product: {
-        name: {type:String,required:true},
-        price: {type: Number,required:true},
-        quantity: {type: Number,required:true}
+        name: {type:String},
+        price: {type: Number},
+        quantity: {type: Number}
     },
-    status: {type:String,required:true},
     createdAt: {
         type: Date,
         default:new Date()
     }, 
-    total: {type:Number,required:true},
+    total: {type:Number},
 })
 
 export default mongoose.model("Order",orderSchema)

@@ -1,13 +1,13 @@
 import { GET_ORDER } from "../actionTypes";
 import * as api from "../../api/index";
 
-export const signin = (formData,history) =>async (dispatch)=> {
+export const getOrder = (formData,history) =>async (dispatch)=> {
     try {
         //log in the user and navigate to the homepage
-        const { data } = await api.signIn(formData);
-        dispatch({ type: AUTH,data });
+        const { data } = await api.getOrder(formData);
+        dispatch({ type: GET_ORDER, payload: data });
 
-        history.push(HOMEPAGE)
+        // history.push(HOMEPAGE)
     } catch (error) {
         console.log(error)
     }

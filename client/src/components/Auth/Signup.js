@@ -24,8 +24,8 @@ function Signup({ toggleLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signup(formData,history))
-  console.log(formData)
-}
+    console.log(formData)
+  }
 
   return (
     <div className="signup-section">
